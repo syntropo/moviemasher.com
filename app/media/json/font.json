@@ -1,0 +1,39 @@
+[
+	{
+		"label":"Frankenweenie",
+		"id":"com.moviemasher.font.default",
+		"type":"font",
+		"source":"../../../../media/font/frankenweenie.ttf"
+	},
+	{
+		"label":"Split splat splodge",
+		"id":"com.moviemasher.font.splat",
+		"type":"font",
+		"source":"../../../../media/font/splat.ttf"
+	},
+	{
+		"label":"Talkies",
+		"id":"com.moviemasher.font.talkies",
+		"type":"font",
+		"source":"../../../../media/font/talkies.ttf"
+	},
+	{
+		"label":"VampyrBats",
+		"id":"com.moviemasher.font.vampyrbats",
+		"type":"font",
+		"source":"../../../../media/font/vampyrbats.ttf"
+	},
+	{
+		"label":"WC Rhesus B Bta",
+		"id":"com.moviemasher.font.wcrhesusbbta",
+		"type":"font",
+		"source":"../../../../media/font/wcrhesusbbta.ttf"
+	}
+]
+
+
+
+
+
+
+

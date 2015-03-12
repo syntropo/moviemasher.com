@@ -1,0 +1,22 @@
+[
+	{
+		"id":"com.moviemasher.img.mm-136x64.png",
+		"label":"Movie Masher",
+		"source":"..\/..\/..\/..\/media\/img\/mm-136x64.png",
+		"url":"..\/..\/..\/..\/media\/img\/mm-136x64.png",
+		"icon":"..\/..\/..\/..\/media\/img\/mm-136x64.png",
+		"type":"image",
+		"group":"image"
+	},
+	{
+		"id":"com.moviemasher.img.mm-logo-200.png",
+		"label":"Logo",
+		"source":"..\/..\/..\/..\/media\/img\/mm-logo-200.png",
+		"url":"..\/..\/..\/..\/media\/img\/mm-logo-200.png",
+		"icon":"..\/..\/..\/..\/media\/img\/mm-logo-200.png",
+		"type":"image",
+		"group":"image"
+	}
+]
+
+

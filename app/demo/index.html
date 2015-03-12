@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:ng="http://angularjs.org" lang="en">
+	<head><base href="../bower_components/angular-moviemasher/app/">
+		<meta charset="utf-8">
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /> 
+		<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>AngularJS Example :: Movie Masher</title>
+		<script src="../../angular/angular.min.js"></script>
+		<script src="../../angular-resource/angular-resource.min.js"></script>
+		<script src="../../angular-file-upload/angular-file-upload.min.js"></script>
+		<script src="../../angular-bootstrap-colorpicker/js/bootstrap-colorpicker-module.js"></script>
+		<script src="../../opentype.js/dist/opentype.min.js"></script>
+		<script src="../../moviemasher.js/dist/moviemasher.min.js"></script>
+		<script src="components/angular-moviemasher.min.js"></script>
+		<link rel="stylesheet" href="../../bootstrap/dist/css/bootstrap.css">
+		<link rel="stylesheet" href="../../angular-bootstrap-colorpicker/css/colorpicker.css">
+		<link rel="stylesheet" href="app.css" />
+	</head>
+	<body ng-app='angular.moviemasher'>
+		<div class="amm-ui" amm-rest-module-search-params-group="@group" amm-rest-module-search-url="../../../../media/json/:group.json" amm-rest-media-search-params-group="@group" amm-rest-media-search-url="../../../../media/json/:group.json"></div>
+	</body>
+</html>
