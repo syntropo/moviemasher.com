@@ -4,9 +4,9 @@
 	"homepage": "http://www.moviemasher.com",
 	"authors": [ {"name": "Movie Masher", "email": "support@moviemasher.com" }],
 	"description": "Builds moviemasher.com web site",
-	"version": "1.0.1",
+	"version": "1.0.2",
 	"dependencies": {
-		"angular-moviemasher": "1.0.6"
+		"angular-moviemasher": "1.0.9"
 	},
 	"devDependencies": {
 		"grunt": "^0.4.5",

@@ -1,0 +1,292 @@
+<!doctype html>
+<html class='no-js' lang="">
+  <head>
+    <meta charset="utf-8">
+    <title>Movie Masher : Deployment Wizard</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <link rel="stylesheet" href="/media/css/normalize.css">
+    <link rel="stylesheet" href="/media/css/main.css">
+    <link rel="stylesheet" href="/media/css/moviemasher.css">
+    <meta property="og:title" content="Movie Masher : Open Source Online Video Editor and Encoding API" />
+    <meta name="description" content="Provides front end interface and back end API for browser-based video editing while your middleware controls presentation and underlying functionality." />
+    <meta property="og:description" content="Provides front end interface and back end API for browser-based video editing while your middleware controls presentation and underlying functionality." />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="//www.moviemasher.com/media/img/mm-logo-200.png" />
+    <meta property="og:url" content="//www.moviemasher.com/" />
+    <meta property="og:site_name" content="Movie Masher"/>
+    <meta property="fb:app_id" content="9967461435" />
+    <meta property="fb:admins" content="1052005972" />
+    <meta name="wot-verification" content="6e8112b54b30e750517c"/>
+<style>
+.swap {
+  width: 502px;
+}
+.swap-help{
+  width:522px;
+}
+.swap-form{
+  width: 308px;
+}
+.swap-floating {
+  position:absolute;
+}
+.swap-hidden {
+  visibility:hidden;
+  position:absolute;
+}
+iframe.zoom{
+  width:100%;
+  height:100%;
+  margin:0px;
+  padding:0;
+  -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+      box-sizing: content-box;
+  border:0;
+  overflow:auto;
+  -webkit-overflow-scrolling:touch;
+}
+div.swapped {
+  padding: 10px;
+  position:absolute;
+  left:0;
+  right:0;
+  top:0;
+  bottom:0;
+}
+div.frame {
+  padding: 0px;
+}
+</style>
+<script type="text/javascript" src="/media/js/swap.js"></script>
+<script type='text/javascript'>
+<!--
+var ids = ["ui-sqs-s3", "headless"];
+var swap_ids = ["default","headless_stack"];
+var region_map = {
+  "us-east-1": "US East (Virginia)",
+  "us-east-2": "US East (Ohio)",
+  "us-west-2": "US West (Oregon)",
+  "us-west-1": "US West (N. California)",
+  "eu-west-1": "EU West (Ireland)",
+  "eu-central-1": "EU Central (Frankfurt)",
+  "ap-northeast-1": "Asia Pacific (Tokyo)",
+  "ap-northeast-2": "Asia Pacific (Seoul)",
+  "ap-southeast-1": "Asia Pacific (Singapore)",
+  "ap-southeast-2": "Asia Pacific (Sydney)",
+  "sa-east-1": "South America (São Paulo)",
+};
+function id_index(form){
+	var sdk_checked = form.sdk[1].checked;
+	var index = 0;
+	if (sdk_checked) index += 1;
+	return index;
+}
+function changed(form) {
+	swap(swap_ids[id_index(form)]);
+	return true;
+}
+function submitted(form) {
+	var select = form.region;
+	var region = select.options[select.selectedIndex].value;
+	var version = '4.0.21';
+	var template = ids[id_index(form)];
+	var url = 'https://console.aws.amazon.com/cloudformation/home?region=';
+	url += region;
+	url += '#cstack=sn~MovieMasher-' + template + '-' + version + '|turl~http://s3';
+	if (region != 'us-east-1') url += '-' + region;
+	url += '.amazonaws.com/';
+	url += 'moviemasher-' + region + '/cloudformation/'
+	url += template + '-' + version;
+	url += '.txt';
+	form.action = url;
+	return true;
+}
+//-->
+</script>
+    </head>
+    <body>
+		<div id="fb-root"></div>
+		<!-- Header -->
+    	<div class='hd'>
+    		<div class='wd pd'>
+    			<!-- Social Buttons -->
+				<table style='float:right;margin-top:24px;'>
+					<tr style='vertical-align:top;'>
+						<td style='padding:4px;'>
+							<div class="fb-like" data-href="http://www.moviemasher.com" data-send="true" data-layout="button_count" data-width="132" data-show-faces="false" data-font="arial"></div>
+						</td>
+						<td>
+							<!-- Place this tag where you want the +1 button to render. -->
+							<div style='width:70px;overflow:hidden;'>
+								<div class="g-plusone" data-size="medium" data-href="http://www.moviemasher.com"></div>
+							</div>
+							<!-- Place this tag after the last +1 button tag. -->
+							<script type="text/javascript">
+							  (function() {
+								var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+								po.src = 'https://apis.google.com/js/plusone.js';
+								var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+							  })();
+							</script>
+						</td>
+						<td style='padding-top:6px;'>
+							<iframe style="border:none;width:90px;height:24px;overflow:hidden;" src="https://platform.twitter.com/widgets/tweet_button.html?url=http%3A%2F%2Fwww.moviemasher.com"></iframe>
+						</td>
+						<td style='padding-top:6px;'>
+							<form action="https://www.paypal.com/cgi-bin/webscr" method="post">
+								<input type="hidden" name="cmd" value="_s-xclick" />
+								<input type="hidden" name="hosted_button_id" value="75YQHMFEATLCL" />
+								<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_SM.gif" name="submit" alt="PayPal - The safer, easier way to pay online!" />
+								<img alt="" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1" />
+							</form>
+						</td>
+					</tr>
+				</table>
+				<a href='/'><img style='float:left;margin-right:10px;' src='/media/img/mm-logo-200.png' width='100' height='100' alt='MM' /><img style='margin-top:26px' src='/media/img/moviemasher-410x48.png' width='205' height='24' alt='Movie Masher' /></a>
+				<h1>open source online video editor &amp; encoding api</h1>
+				<h2 style="float:right;">
+          <b><a href='/docs/index.html'>Documentation</a></b> |
+          <b><a href='/demo/index.html'>Demo</a></b> |
+          <b><a href='/deploy/index.html'>Deploy</a></b> |
+          <b><a href='mailto:connect27@moviemasher.com'>Contact</a></b>
+				</h2>
+			</div>
+    	</div>
+    	<!-- Content Start -->
+
+
+
+<form action='javascript:void()' target='_blank' onsubmit='return submitted(this);'>
+  <div class='bd wd bc'>
+	  <table id="home">
+	    <tr>
+			  <td class='swap-form'>
+          <h3>AWS Deployment Wizard</h3>
+          <p>
+            Update the form below to display the steps required to launch a fully functional,
+            scaleable and configurable deployment of Movie Masher
+            utilizing Amazon's <a href='http://aws.amazon.com/cloudformation/'>CloudFormation</a> service.
+            The resultant AWS resources are collectively referred to as a 'stack' and can be easily
+            shut back down again in the CloudFormation console to avoid further usage charges.
+          </p>
+          <p>
+            Deploy into which AWS Region?
+            <br>
+            <select name='region' id='region'>
+              <option value="us-east-1">US East (Virginia)</option>
+              <option value="us-east-1">US East (Ohio)</option>
+              <option value="us-west-2">US West (Oregon)</option>
+              <option value="us-west-1">US West (N. California)</option>
+              <option value="eu-west-1">EU West (Ireland)</option>
+              <option value="eu-central-1">EU Central (Frankfurt)</option>
+              <option value="ap-northeast-1">Asia Pacific (Tokyo)</option>
+              <option value="ap-northeast-2">Asia Pacific (Seoul)</option>
+              <option value="ap-southeast-1">Asia Pacific (Singapore)</option>
+              <option value="ap-southeast-2">Asia Pacific (Sydney)</option>
+              <option value="ap-south-1">Asia Pacific (Mumbai)</option>
+              <option value="sa-east-1">South America (São Paulo)</option>
+            </select>
+          </p>
+          <p>
+            Use <span id='sdk_name'>angular-moviemasher</span> installed on your server?
+            <br>
+            <input onchange='return changed(this.form)' type='radio' name='sdk' value='0' checked='checked' /> No
+            <input onchange='return changed(this.form)' type='radio' name='sdk' value='1'/> Yes
+          </p>
+        </td>
+        <td class='swap-help'>
+          <div id="default" class="swap swap-floating">
+            <b>quick start: moviemasher.rb + angular.js stack</b>
+            <ol>
+              <li><b>create</b> an EC2 Key Pair if your account doesn't have one yet in the selected region</li>
+              <li><b>launch</b> the <a target='_blank' href='https://aws.amazon.com/marketplace/pp/B00QKW0P2A'>Movie Masher AMI</a> in the AWS Marketplace at least once to provide your account access to it.</li>
+              <li><input type='submit' value='Launch' /> CloudFormation's Create Stack Wizard (try again if clicking this button displays an empty page)</li>
+              <li>
+                <b>submit</b> the initial form in the Create Stack Wizard, customizing stack name if desired.
+              </li>
+              <li>
+                <b>select</b> an existing EC2 Key Pair, review all other options, and submit.
+              </li>
+              <li>
+                <b>check</b> the 'I acknowledge...' checkbox, or the stack will not launch.
+              </li>
+              <li>
+                <b>finish</b> the Create Stack Wizard, and wait patiently until complete (about ten minutes).
+              </li>
+              <li>
+                <b>click</b> the stack's Output tab and follow the link to the UI Instance, using the instance ID as password.
+              </li>
+            </ol>
+            <b>CloudFormation Resources:</b> moviemasher.rb instance, angular-moviemasher instance, SQS queue, S3 bucket, CloudWatch Alarms
+          </div>
+          <div id="headless_stack" class="swap swap-hidden">
+
+            <b>quick start: moviemasher.rb stack</b>
+            <ol>
+              <li>
+                <b>create</b> both an SQS queue and S3 bucket.
+              </li>
+              <li><b>launch</b> the <a target='_blank' href='https://aws.amazon.com/marketplace/pp/B00QKW0P2A'>Movie Masher AMI</a> in the AWS Marketplace at least once to provide your account access to it.</li>
+              <li><input type='submit' value='Launch' /> CloudFormation's Create Stack Wizard (try again if clicking this button displays an empty page).</li>
+              <li>
+                <b>submit</b> the initial form in the Create Stack Wizard, customizing stack name if desired.
+              </li>
+              <li>
+                <b>enter</b> queue and bucket details, review all other options, and submit.
+              </li>
+              <li>
+                <b>check</b> the 'I acknowledge...' checkbox, or the stack will not launch.
+              </li>
+              <li>
+                <b>finish</b> the Create Stack Wizard, and wait patiently until complete (about ten minutes).
+              </li>
+              <li>
+                <b>configure</b> your installation of angular-moviemasher to use the same queue and bucket.
+              </li>
+            </ol>
+            <b>CloudFormation Resources:</b> moviemasher.rb instance, CloudWatch Alarms
+          </div>
+        </td>
+      </tr>
+    </table>
+  </div>
+</form>
+
+
+    <!-- Content End -->
+    <!-- Google Ads -->
+    <div class='bd bc wd pd' style="padding-top:0;">
+      <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+      <!-- Footer -->
+      <ins class="adsbygoogle" style="float:left;display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-4972916009308781" data-ad-slot="3382179044"></ins>
+      <!-- Footer Corner -->
+      <ins class="adsbygoogle" style="float:right;display:inline-block;width:160px;height:90px" data-ad-client="ca-pub-4972916009308781" data-ad-slot="6137169045"></ins>
+      <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+        (adsbygoogle = window.adsbygoogle || []).push({});
+      </script>
+    </div>
+    <!-- Google Analytics -->
+    <script>
+      (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+      function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+      e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+      e.src='//www.google-analytics.com/analytics.js';
+      r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+      ga('create','UA-760062-1','auto');ga('send','pageview');
+    </script>
+    <!-- Facebook Integration -->
+    <script>
+      (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=9967461435";
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));
+    </script>
+  </body>
+</html>
+

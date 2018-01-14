@@ -2,185 +2,207 @@
 <html class='no-js' lang="">
     <head>
         <meta charset="utf-8">
-		<title>Movie Masher : Open Source Online Video Editor and Encoding API</title>
+        <title>Movie Masher : Open Source Online Video Editor and Encoding API</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-        <link rel="stylesheet" href="/media/css/normalize.css">
-        <link rel="stylesheet" href="/media/css/main.css">
-        <link rel="stylesheet" href="/media/css/moviemasher.css">
-		<meta property="og:title" content="Movie Masher : Open Source Online Video Editor and Encoding API" /> 
+        <link rel="stylesheet" href="media/css/normalize.css">
+        <link rel="stylesheet" href="media/css/main.css">
+        <link rel="stylesheet" href="media/css/moviemasher.css">
+        <meta property="og:title" content="Movie Masher : Open Source Online Video Editor and Encoding API" />
         <meta name="description" content="Provides front end interface and back end API for browser-based video editing while your middleware controls presentation and underlying functionality." />
-		<meta property="og:description" content="Provides front end interface and back end API for browser-based video editing while your middleware controls presentation and underlying functionality." /> 
-		<meta property="og:type" content="website" /> 
-		<meta property="og:image" content="//www.moviemasher.com/media/img/mm-logo-200.png" />
-		<meta property="og:url" content="//www.moviemasher.com/" /> 
-		<meta property="og:site_name" content="Movie Masher"/> 
-		<meta property="fb:app_id" content="9967461435" /> 
-		<meta property="fb:admins" content="1052005972" />
-		<meta name="wot-verification" content="6e8112b54b30e750517c"/>
+        <meta property="og:description" content="Provides front end interface and back end API for browser-based video editing while your middleware controls presentation and underlying functionality." />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="//www.moviemasher.com/media/img/mm-logo-200.png" />
+        <meta property="og:url" content="//www.moviemasher.com/" />
+        <meta property="og:site_name" content="Movie Masher"/>
+        <meta property="fb:app_id" content="9967461435" />
+        <meta property="fb:admins" content="1052005972" />
+        <meta name="wot-verification" content="6e8112b54b30e750517c"/>
     </head>
     <body>
-		<div id="fb-root"></div>
-		<!-- Header -->
-    	<div class='hd'>
-    		<div class='wd pd'>
-    			<!-- Social Buttons -->
-				<table style='float:right;margin-top:24px;'>
-					<tr style='vertical-align:top;'>
-						<td style='padding:4px;'>
-							<div class="fb-like" data-href="http://www.moviemasher.com" data-send="true" data-layout="button_count" data-width="132" data-show-faces="false" data-font="arial"></div>
-						</td>
-						<td>
-							<!-- Place this tag where you want the +1 button to render. -->
-							<div style='width:70px;overflow:hidden;'>
-								<div class="g-plusone" data-size="medium" data-href="http://www.moviemasher.com"></div>
-							</div>
-							<!-- Place this tag after the last +1 button tag. -->
-							<script type="text/javascript">
-							  (function() {
-								var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
-								po.src = 'https://apis.google.com/js/plusone.js';
-								var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
-							  })();
-							</script>
-						</td>
-						<td style='padding-top:6px;'>
-							<iframe style="border:none;width:90px;height:24px;overflow:hidden;" src="https://platform.twitter.com/widgets/tweet_button.html?url=http%3A%2F%2Fwww.moviemasher.com"></iframe>
-						</td>
-						<td style='padding-top:6px;'>
-							<form action="https://www.paypal.com/cgi-bin/webscr" method="post">
-								<input type="hidden" name="cmd" value="_s-xclick" />
-								<input type="hidden" name="hosted_button_id" value="75YQHMFEATLCL" />
-								<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_SM.gif" name="submit" alt="PayPal - The safer, easier way to pay online!" />
-								<img alt="" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1" />
-							</form>
-						</td>
-					</tr>
-				</table>
-				<img style='float:left;margin-right:10px;' src='/media/img/mm-logo-200.png' width='100' height='100' alt='MM' /> 
-				<img style='margin-top:26px' src='/media/img/moviemasher-410x48.png' width='205' height='24' alt='Movie Masher' />    
-				<h1>open source online video editor &amp; encoding api</h1>
-				<div style="text-align:right;"><b><a href='mailto:connect68@moviemasher.com'>@Contact</a></b></div>
-			</div>
-    	</div>
-    	<!-- Content Start -->
-    	<div class='bd wd bc'>
-			<table id="home">
-				<tr>
-					<td style='width:24%'>
-						<h3><em class='c2'>version</em> 4.0.12</h3>
-						Released: Mar 11th, 2015
-						<p>
-							<a href='/docs/'><img style='margin-right:6px;' src='/media/img/docs-50x64.png' width='25' height='32' /><b>Documentation</b></a>
-						</p>
-						<span style='font-size:11px'>
-							<p>
-								Movie Masher version 4.0.x overhauls core components while limiting changes 
-								in its middleware layer, for easier migration of existing sites. 
-							</p>
-							<ul>
-								<li>
-									UI components previously implemented in 
-									<a href='http://www.adobe.com/products/flash.html'>Adobe Flash</a> 
-									have been ported to native 
-									<a href='http://en.wikipedia.org/wiki/JavaScript'>JavaScript</a>
-									and 
-									<a href='https://angularjs.org'>AngularJS</a>
-								</li>
-								<li>
-									Transcoding components previously implemented in 
-									<a href='http://php.net/'>PHP</a> 
-									have been ported to 
-									<a href='https://www.ruby-lang.org/'>Ruby</a>
-								</li>
-								<li>
-									The mash format has changed from 
-									<a href='http://www.w3.org/XML/'>XML</a>
-									to 
-									<a href='http://www.json.org/'>JSON</a>
-								</li>
-							</ul>
-							<p>
-								Some features available in previous versions have yet to be ported 
-								including REST support, webcam recording and the more elaborate modules. 
-							</p>
-							<p>
-								Nomenclature for raw mash assets has changed slightly, 
-								and syntax for modular media has been significantly restructured
-								to match the <a href='http://ffmpeg.org/'>FFmpeg</a> filter architecture.
-							</p>
-						</span>
-					</td>
-					<td style='width:38%;'>
-						<h3><em class='c2'>what</em> is movie masher?</h3>
-						Movie Masher is a collection of open source projects that 
-						<b>add video editing capabilities</b>
-						to your website.
-						<ul>
-							<li>
-								<h4><a href='https://github.com/moviemasher/moviemasher.js'>moviemasher.js</a></h4> 
-								stands below angular-moviemasher, providing audiovisual playback handling and edit support in a web browser
-							</li>
-							<li>
-								<h4><a href='https://github.com/moviemasher/angular-moviemasher'>angular-moviemasher</a></h4> 
-								sits between moviemasher.js and moviemasher.rb, providing an editing GUI and simple CMS middleware layer
-							</li>
-							<li>
-								<h4><a href='https://github.com/moviemasher/moviemasher.rb'>moviemasher.rb</a></h4> 
-								sits behind angular-moviemasher, providing processor intensive video transcoding services through a simple API
-							</li>
-						</ul>
-						<p>
-							The projects can be used individually or together for a complete end-to-end system. 
-						</p>
-						<p>
-							Movie Masher is designed with integration in mind, enabling a variety of deployment 
-							strategies. Core authentication, data and media storage mechanisms are isolated 
-							in the PHP middleware. 
-							<a class='bt' style='margin-top: 10px;float:right;' href='/demo/'><img style='margin-right:6px;' src='/media/img/mm-136x64.png' width='34' height='16' alt='MM' />View Demo</a>
-						</p>
-					</td>
-					<td style='width:38%;'>
-						<h3><em class='c2'>where</em> is movie masher?</h3>
-						<p>
-						Run Movie Masher in the cloud, on your box, or dig right into the codebase...
-						</p>
-						<a href='https://aws.amazon.com/marketplace/pp/B00QKW0P2A'><img src='/media/img/amp-420x80.png' width='210' height='40' alt='AWS Marketplace' /><h2>Movie Masher AMI in AWS Marketplace</h2></a>
-						<p>
-							<b>Users:</b> 
-							You are just 1-Click&trade; from launching your own private deployment of Movie Masher
-							within Amazon's cloud. 
-						</p>
-						<a href='https://registry.hub.docker.com/repos/moviemasher/'><img src='/media/img/doc-420x80.png' width='210' height='40' alt='Docker' /><h2>Movie Masher Images in Docker</h2></a>
-						<p>
-							<b>Developers:</b> 
-							You are just two run commands from launching your own local deployment of Movie Masher 
-							within Docker's environment. 
-						</p>
-						<a href='https://github.com/moviemasher'><img src='/media/img/ghb-420x80.png' width='210' height='40' alt='Github' /><h2>Movie Masher Repositories in Github</h2></a>
-						<p>
-							<b>Programmers:</b> 
-							You are just three clone commands from editing your own local copy of Movie Masher
-							within your IDE.
-						</p>
-					</td>
-				</tr>
-			</table>
-		</div>
-		<!-- Content End -->
-    	<!-- Google Ads -->
+    <div id="fb-root"></div>
+    <!-- Header -->
+      <div class='hd'>
+        <div class='wd pd'>
+          <!-- Social Buttons -->
+        <table style='float:right;margin-top:24px;'>
+          <tr style='vertical-align:top;'>
+            <td style='padding:4px;'>
+              <div class="fb-like" data-href="http://www.moviemasher.com" data-send="true" data-layout="button_count" data-width="132" data-show-faces="false" data-font="arial"></div>
+            </td>
+            <td>
+              <!-- Place this tag where you want the +1 button to render. -->
+              <div style='width:70px;overflow:hidden;'>
+                <div class="g-plusone" data-size="medium" data-href="http://www.moviemasher.com"></div>
+              </div>
+              <!-- Place this tag after the last +1 button tag. -->
+              <script type="text/javascript">
+                (function() {
+                var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+                po.src = 'https://apis.google.com/js/plusone.js';
+                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+                })();
+              </script>
+            </td>
+            <td style='padding-top:6px;'>
+              <iframe style="border:none;width:90px;height:24px;overflow:hidden;" src="https://platform.twitter.com/widgets/tweet_button.html?url=http%3A%2F%2Fwww.moviemasher.com"></iframe>
+            </td>
+            <td style='padding-top:6px;'>
+              <form action="https://www.paypal.com/cgi-bin/webscr" method="post">
+                <input type="hidden" name="cmd" value="_s-xclick" />
+                <input type="hidden" name="hosted_button_id" value="75YQHMFEATLCL" />
+                <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_SM.gif" name="submit" alt="PayPal - The safer, easier way to pay online!" />
+                <img alt="" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1" />
+              </form>
+            </td>
+          </tr>
+        </table>
+        <img style='float:left;margin-right:10px;' src='/media/img/mm-logo-200.png' width='100' height='100' alt='MM' />
+        <img style='margin-top:26px' src='/media/img/moviemasher-410x48.png' width='205' height='24' alt='Movie Masher' />
+        <h1>open source online video editor &amp; encoding api</h1>
+        <h2 style="float:right;">
+          <b><a href='/docs/index.html'>Documentation</a></b> |
+          <b><a href='/demo/index.html'>Demo</a></b> |
+          <b><a href='/deploy/index.html'>Deploy</a></b> |
+          <b><a href='mailto:connect27@moviemasher.com'>Contact</a></b>
+        </h2>
+      </div>
+      </div>
+      <!-- Content Start -->
+      <div class='bd wd bc'>
+      <table id="home">
+        <tr>
+          <td style='width:30%'>
+            <h3><em class='c2'>version</em> 4.0.21</h3>
+            Released: March 17th, 2017
+            <p>
+              <b>Latest Features:</b>
+            </p>
+            <ul>
+              <li>
+                new <b>blend</b> filter, for applying many composite modes like screen, difference, darken, etc.
+              </li>
+              <li>
+                new <b>chromakey</b> filter, for knocking out backgrounds
+              </li>
+              <li>
+                new <b>convolution</b> filter, for many common effects like blur, sharpen, etc.
+              </li>
+              <li>
+                new <b>colorchannelmixer</b> filter, for sepia, grayscale, etc.
+              </li>
+              <li>
+                new <b>docker-compose</b> files, for easier Docker usage
+            </ul>
+            <p>
+              <a href='/docs/index.html'><img style='margin-right:6px;' src='/media/img/docs-50x64.png' width='25' height='32' /><b>Documentation</b></a>
+            </p>
+            <p>
+              Movie Masher version 4.0.x overhauls core components while limiting changes
+              in its middleware layer, for easier migration of existing sites.
+            </p>
+            <ul>
+              <li>
+                UI components previously implemented in
+                <a href='http://www.adobe.com/products/flash.html'>Adobe Flash</a>
+                have been ported to native
+                <a href='http://en.wikipedia.org/wiki/JavaScript'>JavaScript</a>
+                and
+                <a href='https://angularjs.org'>AngularJS</a>
+              </li>
+              <li>
+                Transcoding components previously implemented in
+                <a href='http://php.net/'>PHP</a>
+                have been ported to
+                <a href='https://www.ruby-lang.org/'>Ruby</a>
+              </li>
+              <li>
+                The mash format has changed from
+                <a href='http://www.w3.org/XML/'>XML</a>
+                to
+                <a href='http://www.json.org/'>JSON</a>
+              </li>
+            </ul>
+          </td>
+          <td style='width:33%;'>
+            <h3><em class='c2'>what</em> is movie masher?</h3>
+            Movie Masher is a collection of open source projects that
+            <b>add video editing capabilities</b>
+            to your website.
+            <ul>
+              <li>
+                <h4><a href='https://github.com/moviemasher/moviemasher.js'>moviemasher.js</a></h4>
+                stands below angular-moviemasher, providing audiovisual playback handling and edit support in a web browser
+              </li>
+              <li>
+                <h4><a href='https://github.com/moviemasher/angular-moviemasher'>angular-moviemasher</a></h4>
+                sits between moviemasher.js and moviemasher.rb, providing an editing GUI and simple CMS middleware layer
+              </li>
+              <li>
+                <h4><a href='https://github.com/moviemasher/moviemasher.rb'>moviemasher.rb</a></h4>
+                sits behind angular-moviemasher, providing processor intensive video transcoding services through a simple API
+              </li>
+            </ul>
+            <p>
+              The projects can be used individually or together for a complete end-to-end system.
+            </p>
+            <p>
+              Movie Masher is designed with integration in mind, enabling a variety of deployment
+              strategies. Core authentication, data and media storage mechanisms are isolated
+              in the PHP middleware.
+              <a class='bt' style='margin-top: 10px;float:right;' href='/demo/index.html'><img style='margin-right:6px;' src='/media/img/mm-136x64.png' width='34' height='16' alt='MM' />View Demo</a>
+            </p>
+    <!--          <div style='height:150px;margin-bottom:10px;' class='bt'>
+              <img style='margin-right:6px;' src='/media/img/azc-225.png' width='45' height='45' />
+              <img style='margin-right:6px;' src='/media/img/azs-146.png' width='73' height='73' />
+            </div>
+          -->
+          </td>
+          <td style='width:37%;'>
+            <h3><em class='c2'>where</em> is movie masher?</h3>
+            <p>
+            Run Movie Masher in the cloud, on your box, or dig right into the codebase...
+            </p>
+            <a href='https://aws.amazon.com/marketplace/pp/B00QKW0P2A'><img src='/media/img/amp-420x80.png' width='210' height='40' alt='AWS Marketplace' /><h2>Movie Masher AMI in AWS Marketplace</h2></a>
+            <p>
+              You are just 1-Click&trade; from launching your own private deployment of Movie Masher
+              within Amazon's cloud - check out our quick and easy <a href='/deploy/index.html'><b>Deployment Wizard</b></a>!
+            </p>
+
+            <a href='http://azure.microsoft.com/en-us/marketplace/partners/moviemasher/moviemasher-moviemasher/'><img src='/media/img/azm-420x80.png' width='210' height='40' alt='Azure Marketplace' /><h2>Movie Masher VM in Azure Marketplace</h2></a>
+            <p>
+              You are just a few clicks from launching your own VM of Movie Masher
+              within Microsoft Azure's cloud.
+            </p>
+
+            <a href='https://hub.docker.com/r/moviemasher/angular-moviemasher/'><img src='/media/img/doc-420x80.png' width='210' height='40' alt='Docker' /><h2>Movie Masher Images in Docker Hub</h2></a>
+            <p>
+              You are just two run commands from launching your own local deployment of Movie Masher
+              within Docker's environment.
+            </p>
+            <a href='https://github.com/moviemasher'><img src='/media/img/ghb-420x80.png' width='210' height='40' alt='Github' /><h2>Movie Masher Repositories in Github</h2></a>
+            <p>
+              You are just three clone commands from editing your own local copy of Movie Masher
+              within your IDE.
+            </p>
+          </td>
+        </tr>
+      </table>
+    </div>
+    <!-- Content End -->
+      <!-- Google Ads -->
         <div class='bd bc wd pd' style="padding-top:0;">
-			<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-			<!-- Footer -->
-			<ins class="adsbygoogle" style="float:left;display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-4972916009308781" data-ad-slot="3382179044"></ins>
-			<!-- Footer Corner -->
-			<ins class="adsbygoogle" style="float:right;display:inline-block;width:160px;height:90px" data-ad-client="ca-pub-4972916009308781" data-ad-slot="6137169045"></ins>
-			<script>
-				(adsbygoogle = window.adsbygoogle || []).push({});
-				(adsbygoogle = window.adsbygoogle || []).push({});
-			</script>
-		</div>
-		<!-- Google Analytics -->
+      <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+      <!-- Footer -->
+      <ins class="adsbygoogle" style="float:left;display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-4972916009308781" data-ad-slot="3382179044"></ins>
+      <!-- Footer Corner -->
+      <ins class="adsbygoogle" style="float:right;display:inline-block;width:160px;height:90px" data-ad-client="ca-pub-4972916009308781" data-ad-slot="6137169045"></ins>
+      <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+        (adsbygoogle = window.adsbygoogle || []).push({});
+      </script>
+    </div>
+    <!-- Google Analytics -->
         <script>
             (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
             function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
@@ -191,13 +213,13 @@
         </script>
         <!-- Facebook Integration -->
         <script>
-        	(function(d, s, id) {
-				var js, fjs = d.getElementsByTagName(s)[0];
-				if (d.getElementById(id)) return;
-				js = d.createElement(s); js.id = id;
-				js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=9967461435";
-				fjs.parentNode.insertBefore(js, fjs);
-			}(document, 'script', 'facebook-jssdk'));
-		</script>
+          (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=9967461435";
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));
+    </script>
     </body>
 </html>

@@ -1,0 +1,50 @@
+[
+  {
+    "id":"color",
+    "source": "../../moviemasher.js/dist/filters/color.js"
+  },
+  {
+    "id":"drawtext",
+    "source": "../../moviemasher.js/dist/filters/drawtext.js"
+  },
+  {
+    "id":"overlay",
+    "source": "../../moviemasher.js/dist/filters/overlay.js"
+  },
+  {
+    "id":"scale",
+    "source": "../../moviemasher.js/dist/filters/scale.js"
+  },
+  {
+    "id":"crop",
+    "source": "../../moviemasher.js/dist/filters/crop.js"
+  },
+  {
+    "id":"drawbox",
+    "source": "../../moviemasher.js/dist/filters/drawbox.js"
+  },
+  {
+    "id":"fade",
+    "source": "../../moviemasher.js/dist/filters/fade.js"
+  },
+  {
+    "id":"setsar",
+    "source": "../../moviemasher.js/dist/filters/setsar.js"
+  },
+  {
+    "id":"colorchannelmixer",
+    "source": "../../moviemasher.js/dist/filters/colorchannelmixer.js"
+  },
+  {
+    "id":"convolution",
+    "source": "../../moviemasher.js/dist/filters/convolution.js"
+  },
+  {
+    "id":"chromakey",
+    "source": "../../moviemasher.js/dist/filters/chromakey.js"
+  },
+  {
+    "id":"blend",
+    "source": "../../moviemasher.js/dist/filters/blend.js"
+  }
+]

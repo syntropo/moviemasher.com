@@ -32,7 +32,7 @@ a:link, a:visited {
     text-decoration: none;
 }
 a:hover, a:active {
-    text-decoration: underline;   
+    text-decoration: underline;
 }
 *, *:before, *:after {
 	-webkit-box-sizing: border-box;
@@ -79,11 +79,13 @@ h1 {
 	font-size:13px;
 	line-height:13px;
 	margin-top: 6px;
+	font-weight:bold;
 }
 h2 {
 	font-size:14px;
 	line-height:14px;
 	margin-top: 8px;
+	font-weight:bold;
 }
 h3 {
 	font-size:18px;
@@ -94,11 +96,13 @@ h3 {
 	background-position:0px 0px;
 	background-size: contain;
 	padding-left:40px;
+	font-weight:bold;
 }
 h4 {
 	font-size:14px;
 	line-height:14px;
 	display: inline;
+	font-weight:bold;
 }
 
 ul {

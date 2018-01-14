@@ -1,0 +1,38 @@
+PRIVACY POLICY
+--------------
+
+At Movie Masher (https://MovieMasher.com), visitor privacy is extremely important. This Privacy Policy outlines the types of personal information that are received and collected and how they are used. First and foremost, we never share your email address or any other personal information to anyone without your direct consent. Period.
+
+1. Log Files
+Like on many websites, log files are used to help learn about when, from where, and how often traffic flows to this site. None of this information is linked to anything that is personally identifiable. The information in the log files include:
+
+Internet Protocol (IP) addresses
+Type of browser
+Date and time stamp
+Referring page
+Page requested
+
+2. Cookies and web beacons
+Unlike many sites, Movie Masher does not itself store cookies on your browser or utilize web beacons. Google does though, to facilitate the following services:
+
+Google Adsense
+Google Adsense is an advertising network which may place and read cookies on your browser and/or use web beacons to collect information. Movie Masher has no access or control over these cookies.
+
+Google Analytics
+Google Analytics is a web analytics tool used to help understand how visitors engage with this website. It reports website trends using cookies and web beacons without identifying individual visitors.
+
+If you wish to disable cookies, you may do so through your web browser options. Instructions for doing so and for other cookie-related management can be found on your web browser's website. You should review Google's Privacy Policy for more information regarding their practices and how to opt-out of their services.
+
+http://www.google.com/policies/privacy/
+
+3. Children
+
+MovieMasher.com does not knowingly collect or solicit Personally Identifiable Information from or about children under 13 except as permitted by law. If we discover we have received any information from a child under 13 in violation of this policy, we will delete that information immediately. If you believe MovieMasher.com has any information from or about anyone under 13, please contact us.
+
+4. Consent
+Your use of this site, in any and all forms, constitutes an acceptance of this Privacy Policy.
+
+5. Changes to this policy
+This Privacy Policy is reviewed and revised from time to time. You will want to revisit it regularly. When it does change, the "Last Updated" date below will update:
+
+Last Updated: October 28th, 2017

@@ -2,236 +2,294 @@
 <html class='no-js' lang="">
     <head>
         <meta charset="utf-8">
-		<title>Movie Masher : Open Source Online Video Editor and Encoding API</title>
+    <title>Movie Masher : Documentation</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="apple-touch-icon" href="/apple-touch-icon.png">
         <link rel="stylesheet" href="/media/css/normalize.css">
         <link rel="stylesheet" href="/media/css/main.css">
         <link rel="stylesheet" href="/media/css/moviemasher.css">
-		<meta property="og:title" content="Movie Masher : Open Source Online Video Editor and Encoding API" /> 
+    <meta property="og:title" content="Movie Masher : Open Source Online Video Editor and Encoding API" />
         <meta name="description" content="Provides front end interface and back end API for browser-based video editing while your middleware controls presentation and underlying functionality." />
-		<meta property="og:description" content="Provides front end interface and back end API for browser-based video editing while your middleware controls presentation and underlying functionality." /> 
-		<meta property="og:type" content="website" /> 
-		<meta property="og:image" content="//www.moviemasher.com/media/img/mm-logo-200.png" />
-		<meta property="og:url" content="//www.moviemasher.com/" /> 
-		<meta property="og:site_name" content="Movie Masher"/> 
-		<meta property="fb:app_id" content="9967461435" /> 
-		<meta property="fb:admins" content="1052005972" />
-		<meta name="wot-verification" content="6e8112b54b30e750517c"/>
-		<style>
-		iframe.zoom{
-			width:100%;
-			height:100%;
-			margin:0px;
-			padding:0;
-			-webkit-box-sizing: content-box;
-				-moz-box-sizing: content-box;
-					box-sizing: content-box;
-		 	border:0;
-		 	overflow:auto;
-		 	-webkit-overflow-scrolling:touch;
-		}
-		div.swapped {
-			padding: 10px;
-		 	position:absolute;
-		 	left:0;
-		 	right:0;
-		 	top:0;
-		 	bottom:0;
-		}
-		div.frame {
-			padding: 0px;
-		}
-		</style>
+    <meta property="og:description" content="Provides front end interface and back end API for browser-based video editing while your middleware controls presentation and underlying functionality." />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="//www.moviemasher.com/media/img/mm-logo-200.png" />
+    <meta property="og:url" content="//www.moviemasher.com/" />
+    <meta property="og:site_name" content="Movie Masher"/>
+    <meta property="fb:app_id" content="9967461435" />
+    <meta property="fb:admins" content="1052005972" />
+    <meta name="wot-verification" content="6e8112b54b30e750517c"/>
+    <style>
+    iframe.zoom{
+      width:100%;
+      height:100%;
+      margin:0px;
+      padding:0;
+      -webkit-box-sizing: content-box;
+        -moz-box-sizing: content-box;
+          box-sizing: content-box;
+       border:0;
+       overflow:auto;
+       -webkit-overflow-scrolling:touch;
+    }
+    div.swapped {
+      padding: 10px;
+       position:absolute;
+       left:0;
+       right:0;
+       top:0;
+       bottom:0;
+    }
+    div.frame {
+      padding: 0px;
+    }
+    </style>
     </head>
     <body>
-		<div id="fb-root"></div>
-		<!-- Header -->
-    	<div class='hd'>
-    		<div class='wd pd'>
-    			<!-- Social Buttons -->
-				<table style='float:right;margin-top:24px;'>
-					<tr style='vertical-align:top;'>
-						<td style='padding:4px;'>
-							<div class="fb-like" data-href="http://www.moviemasher.com" data-send="true" data-layout="button_count" data-width="132" data-show-faces="false" data-font="arial"></div>
-						</td>
-						<td>
-							<!-- Place this tag where you want the +1 button to render. -->
-							<div style='width:70px;overflow:hidden;'>
-								<div class="g-plusone" data-size="medium" data-href="http://www.moviemasher.com"></div>
-							</div>
-							<!-- Place this tag after the last +1 button tag. -->
-							<script type="text/javascript">
-							  (function() {
-								var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
-								po.src = 'https://apis.google.com/js/plusone.js';
-								var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
-							  })();
-							</script>
-						</td>
-						<td style='padding-top:6px;'>
-							<iframe style="border:none;width:90px;height:24px;overflow:hidden;" src="https://platform.twitter.com/widgets/tweet_button.html?url=http%3A%2F%2Fwww.moviemasher.com"></iframe>
-						</td>
-						<td style='padding-top:6px;'>
-							<form action="https://www.paypal.com/cgi-bin/webscr" method="post">
-								<input type="hidden" name="cmd" value="_s-xclick" />
-								<input type="hidden" name="hosted_button_id" value="75YQHMFEATLCL" />
-								<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_SM.gif" name="submit" alt="PayPal - The safer, easier way to pay online!" />
-								<img alt="" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1" />
-							</form>
-						</td>
-					</tr>
-				</table>
-				<a href='/'><img style='float:left;margin-right:10px;' src='/media/img/mm-logo-200.png' width='100' height='100' alt='MM' /><img style='margin-top:26px' src='/media/img/moviemasher-410x48.png' width='205' height='24' alt='Movie Masher' /></a>    
-				<h1>open source online video editor &amp; encoding api</h1>
-				<div style="text-align:right;"><b><a href='mailto:connect68@moviemasher.com'>@Contact</a></b></div>
-			</div>
-    	</div>
-    	<!-- Content Start -->
-    	
-    	
-    	<div class='bd wd bc'>
-			<table id="home">
-				<tr>
-					<td style='width:24%'>
-						<h3><em class='c2'>documentation</em></h3>
-						<p>Released: Mar 11th, 2015</p>
-						
-						<b><a href='#a0'>Getting Started</a></b>
-						<hr/>
-						<p style='font-size:13px;'>
-							<a href='#a1'>AWS Marketplace</a>
-							<br />
-							<a href='#a2'>Docker</a>
-							<br />
-							<a href='#a3'>Github</a>
-						</p>
-						<b><a href='#b0'>Repositories</a></b>
-						<hr/>
-						<p style='font-size:13px;'>
-							<a href='https://github.com/moviemasher/moviemasher.js'>moviemasher.js</a>
-							<br />
-							<a href='https://github.com/moviemasher/angular-moviemasher'>angular-moviemasher</a>
-							<br />
-							<a href='https://github.com/moviemasher/moviemasher.rb'>moviemasher.rb</a>
-						</p>
-					</td>
-					<td style='width:76%;position:relative;min-height:90%;'>
-						<div>
-							<h2><a name='a0'>Getting Started</a></h2>
-							<p>
-								Certainly the fastest, easiest way to get a fully functional deployment up and running
-								is to launch the Movie Masher AMI within AWS Marketplace. You need to have an Amazon
-								account and will be billed based on usage.  
-							</p>
-							<p>
-								Another fast and easy method of seeing the system in action is to run the
-								Movie Masher Docker images locally. You need to have Docker installed, though
-								no account with them is necessary and no charges are incurred. 
-							</p>
-							<p>
-								Alternatively, source code for each project is available
-								at Github, with no account being necessary for download. 
-								The prerequisites need to be installed though, which can 
-								be a nontrivial task - the images come with all required 
-								software preinstalled. 
-							</p>
-						</div>
-						<div>
-							<h2><a name='a1'>AWS Marketplace</a></h2>
-							<p>
-								<a href='https://aws.amazon.com/marketplace/pp/B00QKW0P2A'>The Movie Masher AMI</a> 
-								(Amazon Machine Image) combines all three
-								projects on one box, preconfigured to work well within the AWS
-								(Amazon Web Services) infrastructure and optionally use additional
-								services like S3 (Simple Storage Service) for media hosting and/or
-								SQS (Simple Queue Service) for job delivery. The later option, 
-								combined with CloudWatch Alarms can be used to deploy infrastructure
-								that auto-scales to different traffic patterns. 
-							</p>
-							<p>
-								All instances of the AMI have a cron job that runs the 
-								process_queues rake task from the moviemasher.rb project,
-								which watches a directory for queued jobs. 
-								When the AMI is launched via 1-Click&trade; the apache 
-								daemon is also launched to deliver the angular-moviemasher
-								project, preconfigured to drop jobs into the queue directory.
-								When run in this mode, the AMI Instance Identifier is used as
-								the password - any username can be provided and each user only 
-								sees their media and mashes. 
-							</p>
-						</div>
-						<div>
-							<h2><a name='a2'>Docker</a></h2>
-							<p>
-								There are two <a href='https://registry.hub.docker.com/repos/moviemasher/'>Movie Masher Docker Images</a> 
-								available, for both the moviemasher.rb and angular-moviemasher projects. Each project contains a Dockerfile 
-								and its image is rebuilt automatically as its GitHub repository is updated. Usage instructions
-								are in the README of each project, though angular-moviemasher contains simple run commands for both. 
-							</p>
-							<p>
-								When run in the simplest configuration, the two containers share volumes so that
-								jobs, media and feedback can be easily passed between them. It can be tempting and 
-								potentially difficult to map these to host directories, given permissions issues. 
-								In current versions of Docker, the <b>cp</b> command works for shared volumes too, so 
-								often it's easiest to just copy them to the host. Both images support the <b>exec</b> command 
-								as well, so <b>cat</b> or <b>grep</b> can be easily used to view log files. 
-							</p>
-						</div>
-						<div>
-							<h2><a name='a3'>Github</a></h2>
-							<p>
-								There are three <a href='https://github.com/moviemasher'>Movie Masher GitHub Repositories</a>
-								available, for each of the separate projects. The preferred method for soliciting help of all kinds
-								is the issue tracking mechanism for each repository. 
-								Pull requests are also encouraged, but helpful to create a feature request first so plans can
-								be discussed before much work is done. 
-							</p>
-							<p>
-								Running the system from source is considerably more difficult than the prebuilt images, 
-								due to the dependencies involved and potential platform specific complications. The Dockerfile 
-								for each project might be helpful to review even if you're not using Docker since it contains 
-								installation commands known to work on at least one platform. Ideally, folks working
-								with the source code are able to run images as well, so they know what standard behavior is like. 
-							</p>
-						</div>
-						<div>
-							<h2><a name='b0'>Repositories</a></h2>
-							<p>
-								The Movie Masher codebase is grouped into three tiers, each with their own project repository, README and 
-								documentation.
-								Two low-level tiers (<a href='https://github.com/moviemasher/moviemasher.js'>moviemasher.js</a>
-								and <a href='https://github.com/moviemasher/moviemasher.rb'>moviemasher.rb</a>)
-								handle the dirty work of generating the 
-								initial browser preview and final video rendering, while a middleware layer 
-								(<a href='https://github.com/moviemasher/angular-moviemasher'>angular-moviemasher</a>) 
-								connects them together with user authentication and other CMS (Content Management System) features. 
-							</p>
-							<p>
-								Typically it's the middleware layer that's being customized, ported or wholly replaced in each deployment.
-								But the lower-level components can be used individually too, if only a browser preview or 
-								video rendering is needed. 
-							</p>
-						</div>
-						
-					</td>
-				</tr>
-			</table>
-		</div>
-		<!-- Content End -->
-    	<!-- Google Ads -->
+    <div id="fb-root"></div>
+    <!-- Header -->
+      <div class='hd'>
+        <div class='wd pd'>
+          <!-- Social Buttons -->
+        <table style='float:right;margin-top:24px;'>
+          <tr style='vertical-align:top;'>
+            <td style='padding:4px;'>
+              <div class="fb-like" data-href="http://www.moviemasher.com" data-send="true" data-layout="button_count" data-width="132" data-show-faces="false" data-font="arial"></div>
+            </td>
+            <td>
+              <!-- Place this tag where you want the +1 button to render. -->
+              <div style='width:70px;overflow:hidden;'>
+                <div class="g-plusone" data-size="medium" data-href="http://www.moviemasher.com"></div>
+              </div>
+              <!-- Place this tag after the last +1 button tag. -->
+              <script type="text/javascript">
+                (function() {
+                var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+                po.src = 'https://apis.google.com/js/plusone.js';
+                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+                })();
+              </script>
+            </td>
+            <td style='padding-top:6px;'>
+              <iframe style="border:none;width:90px;height:24px;overflow:hidden;" src="https://platform.twitter.com/widgets/tweet_button.html?url=http%3A%2F%2Fwww.moviemasher.com"></iframe>
+            </td>
+            <td style='padding-top:6px;'>
+              <form action="https://www.paypal.com/cgi-bin/webscr" method="post">
+                <input type="hidden" name="cmd" value="_s-xclick" />
+                <input type="hidden" name="hosted_button_id" value="75YQHMFEATLCL" />
+                <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_SM.gif" name="submit" alt="PayPal - The safer, easier way to pay online!" />
+                <img alt="" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1" />
+              </form>
+            </td>
+          </tr>
+        </table>
+        <a href='/'><img style='float:left;margin-right:10px;' src='/media/img/mm-logo-200.png' width='100' height='100' alt='MM' /><img style='margin-top:26px' src='/media/img/moviemasher-410x48.png' width='205' height='24' alt='Movie Masher' /></a>
+        <h1>open source online video editor &amp; encoding api</h1>
+        <h2 style="float:right;">
+          <b><a href='/docs/index.html'>Documentation</a></b> |
+          <b><a href='/demo/index.html'>Demo</a></b> |
+          <b><a href='/deploy/index.html'>Deploy</a></b> |
+          <b><a href='mailto:connect27@moviemasher.com'>Contact</a></b>
+        </h2>
+      </div>
+      </div>
+      <!-- Content Start -->
+
+
+      <div class='bd wd bc'>
+      <table id="home">
+        <tr>
+          <td style='width:24%'>
+            <h3><em class='c2'>documentation</em></h3>
+            <p>
+              <em class='c2'>version</em> 4.0.21
+              <br>
+              Released: March 17th, 2017
+            </p>
+
+            <b><a href='#a0'>Getting Started</a></b>
+            <hr/>
+            <p style='font-size:13px;'>
+              <a href='#a1'>AWS Marketplace</a>
+              <br />
+              <a href='#a2'>Azure Marketplace</a>
+              <br />
+              <a href='#a3'>Docker</a>
+              <br />
+              <a href='#a4'>Github</a>
+            </p>
+            <b><a href='#b0'>Repositories</a></b>
+            <hr/>
+            <p style='font-size:13px;'>
+              <a href='https://github.com/moviemasher/moviemasher.js'>moviemasher.js</a>
+              <br />
+              <a href='https://github.com/moviemasher/angular-moviemasher'>angular-moviemasher</a>
+              <br />
+              <a href='https://github.com/moviemasher/moviemasher.rb'>moviemasher.rb</a>
+            </p>
+            <b><a href='#c0'>Syntax</a></b>
+            <hr/>
+            <p style='font-size:13px;'>
+              <a href='https://rawgit.com/moviemasher/moviemasher.rb/master/doc/index.html'>Data Structures</a>
+            </p>
+          </td>
+          <td style='width:76%;position:relative;min-height:90%;'>
+            <div>
+              <h2><a name='a0'>Getting Started</a></h2>
+              <p>
+                Certainly the fastest, easiest way to get a fully functional deployment up and running
+                is to launch Movie Masher within the AWS Marketplace or Microsoft Azure Marketplace.
+                You need to have an account and will be billed based on usage of their infrastructure.
+              </p>
+              <p>
+                Another fast and easy method of seeing the system in action is to run the
+                Movie Masher Docker images locally. You need to have Docker installed, though
+                no account with them is necessary and no charges are incurred. Docker is also
+                available as a paid service within both AWS Marketplace and Microsoft Azure Marketplace.
+              </p>
+              <p>
+                Alternatively, source code for each project is available
+                at Github, with no account being necessary for download.
+                The prerequisites need to be installed though, which can
+                be a nontrivial task - the images come with all required
+                software preinstalled, so are much simpler to work with.
+              </p>
+            </div>
+            <div>
+              <h2><a name='a1'>AWS Marketplace</a></h2>
+              <p>
+                <a href='https://aws.amazon.com/marketplace/pp/B00QKW0P2A'>The Movie Masher AMI</a>
+                (Amazon Machine Image) combines all three
+                projects on one box, preconfigured to work well within the AWS
+                (Amazon Web Services) infrastructure and optionally use additional
+                services like S3 (Simple Storage Service) for media hosting and
+                SQS (Simple Queue Service) for job delivery. The later option,
+                combined with CloudWatch Alarms, can be used to deploy infrastructure
+                that auto-scales to different traffic patterns.
+              </p>
+              <p>
+                All instances of the AMI have a cron job that runs the
+                process_queues rake task from the moviemasher.rb project,
+                which watches a directory for queued jobs.
+                When the AMI is launched via 1-Click&trade; the apache
+                daemon is also launched to deliver the angular-moviemasher
+                UI, preconfigured to drop jobs into the queue directory.
+                When run in this mode, the AMI Instance Identifier is used as
+                the password - any username can be provided and each user only
+                sees their media and mashes.
+              </p>
+              <p>
+                It's also possible for the AMI to be run in 'headless' mode,
+                so only the moviemasher.rb project is active, by providing User
+                Data at launch time in JSON format. If there is no 'angular-moviemasher'
+                key then apache will not be launched, so a 'queue_url' key is provided
+                instead so jobs can be polled from it. To authenticate requests the
+                instance can be assigned a Role with permissions to the queue and
+                and S3 buckets used, or 'aws_secret_access_key' and
+                'aws_access_key_id' keys can be provided.
+
+              </p>
+              <p>
+                The <a href='/deploy/index.html'>Deployment Wizard</a>
+                can be used to easily launch a scaleable cluster of AMI instances
+                running in headless mode and (optionally) a single instance
+                hosting the UI, as well as a queue and bucket. Whichever
+                options are selected, the appropriate Roles are assigned to
+                limit access to the queue and bucket.
+              </p>
+            </div>
+            <div>
+              <h2><a name='a2'><span style="color:red;">NEW</span> Azure Marketplace</a></h2>
+              <p>
+                The <a href='http://azure.microsoft.com/en-us/marketplace/partners/moviemasher/moviemasher-moviemasher/'>Movie Masher VMI</a>
+                (Virtual Machine Image) combines all three
+                projects on one box, preconfigured to work well within the Microsoft Azure infrastructure.
+                Support for utilizing Azure's storage and message queue services is still in the works...
+              </p>
+            </div>
+            <div>
+              <h2><a name='a3'>Docker</a></h2>
+              <p>
+                There are two <a href='https://hub.docker.com/u/moviemasher/'>Movie Masher Docker Images</a>
+                available, for both the moviemasher.rb and angular-moviemasher projects. Each project contains a Dockerfile
+                and its image is rebuilt automatically as its GitHub repository is updated. Usage instructions
+                are in the README of each project, though angular-moviemasher contains simple run commands for both.
+              </p>
+              <p>
+                When run in the simplest configuration, the two containers share volumes so that
+                jobs, media and feedback can be easily passed between them. It can be tempting and
+                potentially difficult to map these to host directories, given permissions issues.
+                In current versions of Docker, the <b>cp</b> command works for shared volumes too, so
+                often it's easiest to just copy them to the host. Both images support the <b>exec</b> command
+                as well, so <b>cat</b> or <b>grep</b> can be easily used to view log files.
+              </p>
+            </div>
+            <div>
+              <h2><a name='a4'>Github</a></h2>
+              <p>
+                There are three <a href='https://github.com/moviemasher'>Movie Masher GitHub Repositories</a>
+                available, for each of the separate projects. The preferred method for soliciting help of all kinds
+                is the issue tracking mechanism for each repository.
+                Pull requests are also encouraged, but helpful to create a feature request first so plans can
+                be discussed before much work is done.
+              </p>
+              <p>
+                Running the system from source is considerably more difficult than the prebuilt images,
+                due to the dependencies involved and potential platform specific complications. The Dockerfile
+                for each project might be helpful to review even if you're not using Docker since it contains
+                installation commands known to work on at least one platform. Ideally, folks working
+                with the source code are able to run images as well, so they know what standard behavior is like.
+              </p>
+            </div>
+            <div>
+              <h2><a name='b0'>Repositories</a></h2>
+              <p>
+                The Movie Masher codebase is grouped into three tiers, each with their own project repository, README and
+                documentation.
+                Two low-level tiers (<a href='https://github.com/moviemasher/moviemasher.js'>moviemasher.js</a>
+                and <a href='https://github.com/moviemasher/moviemasher.rb'>moviemasher.rb</a>)
+                handle the dirty work of generating the
+                initial browser preview and final video rendering, while a middleware layer
+                (<a href='https://github.com/moviemasher/angular-moviemasher'>angular-moviemasher</a>)
+                connects them together with user authentication and other CMS (Content Management System) features.
+              </p>
+              <p>
+                Typically it's the middleware layer that's being customized, ported or wholly replaced in each deployment.
+                But the lower-level components can be used individually too, if only a browser preview or
+                video rendering is needed.
+              </p>
+            </div>
+            <div>
+              <h2><a name='c0'>Syntax</a></h2>
+              <p>
+                Movie Masher data is now always encoded in JSON format. All the
+                <a href='https://rawgit.com/moviemasher/moviemasher.rb/master/doc/index.html'>Data Structures</a>
+                related to transcoding jobs, including the mash format supported
+                by moviemasher.js and angular-moviemasher, is
+                documented in the moviemasher.rb project. The UI layout
+                configuration is no longer
+                considered a data structure since it's now made up of CSS and
+                 HTML (angular-directives).
+              </p>
+            </div>
+
+          </td>
+        </tr>
+      </table>
+    </div>
+    <!-- Content End -->
+      <!-- Google Ads -->
         <div class='bd bc wd pd' style="padding-top:0;">
-			<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-			<!-- Footer -->
-			<ins class="adsbygoogle" style="float:left;display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-4972916009308781" data-ad-slot="3382179044"></ins>
-			<!-- Footer Corner -->
-			<ins class="adsbygoogle" style="float:right;display:inline-block;width:160px;height:90px" data-ad-client="ca-pub-4972916009308781" data-ad-slot="6137169045"></ins>
-			<script>
-				(adsbygoogle = window.adsbygoogle || []).push({});
-				(adsbygoogle = window.adsbygoogle || []).push({});
-			</script>
-		</div>
-		<!-- Google Analytics -->
+      <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+      <!-- Footer -->
+      <ins class="adsbygoogle" style="float:left;display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-4972916009308781" data-ad-slot="3382179044"></ins>
+      <!-- Footer Corner -->
+      <ins class="adsbygoogle" style="float:right;display:inline-block;width:160px;height:90px" data-ad-client="ca-pub-4972916009308781" data-ad-slot="6137169045"></ins>
+      <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+        (adsbygoogle = window.adsbygoogle || []).push({});
+      </script>
+    </div>
+    <!-- Google Analytics -->
         <script>
             (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
             function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
@@ -242,13 +300,13 @@
         </script>
         <!-- Facebook Integration -->
         <script>
-        	(function(d, s, id) {
-				var js, fjs = d.getElementsByTagName(s)[0];
-				if (d.getElementById(id)) return;
-				js = d.createElement(s); js.id = id;
-				js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=9967461435";
-				fjs.parentNode.insertBefore(js, fjs);
-			}(document, 'script', 'facebook-jssdk'));
-		</script>
+          (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=9967461435";
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));
+    </script>
     </body>
 </html>

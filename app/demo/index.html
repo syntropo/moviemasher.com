@@ -1,23 +1,141 @@
 <!DOCTYPE html>
 <html xmlns:ng="http://angularjs.org" lang="en">
-	<head><base href="../bower_components/angular-moviemasher/app/">
-		<meta charset="utf-8">
-		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /> 
-		<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>AngularJS Example :: Movie Masher</title>
-		<script src="../../angular/angular.min.js"></script>
-		<script src="../../angular-resource/angular-resource.min.js"></script>
-		<script src="../../angular-file-upload/angular-file-upload.min.js"></script>
-		<script src="../../angular-bootstrap-colorpicker/js/bootstrap-colorpicker-module.js"></script>
-		<script src="../../opentype.js/dist/opentype.min.js"></script>
-		<script src="../../moviemasher.js/dist/moviemasher.min.js"></script>
-		<script src="components/angular-moviemasher.min.js"></script>
-		<link rel="stylesheet" href="../../bootstrap/dist/css/bootstrap.css">
-		<link rel="stylesheet" href="../../angular-bootstrap-colorpicker/css/colorpicker.css">
-		<link rel="stylesheet" href="app.css" />
-	</head>
-	<body ng-app='angular.moviemasher'>
-		<div class="amm-ui" amm-rest-module-search-params-group="@group" amm-rest-module-search-url="../../../../media/json/:group.json" amm-rest-media-search-params-group="@group" amm-rest-media-search-url="../../../../media/json/:group.json"></div>
-	</body>
+  <head><base href="../bower_components/angular-moviemasher/app/">
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>AngularJS Example :: Movie Masher</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <link rel="stylesheet" href="../../bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../bootstrap/dist/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="../../angular-bootstrap-colorpicker/css/colorpicker.min.css">
+    <link rel="stylesheet" href="app.css" />
+    <link rel="stylesheet" href="/media/css/normalize.css">
+    <link rel="stylesheet" href="/media/css/main.css">
+    <link rel="stylesheet" href="/media/css/moviemasher.css">
+    <meta property="og:title" content="Movie Masher : Open Source Online Video Editor and Encoding API" />
+    <meta name="description" content="Provides front end interface and back end API for browser-based video editing while your middleware controls presentation and underlying functionality." />
+    <meta property="og:description" content="Provides front end interface and back end API for browser-based video editing while your middleware controls presentation and underlying functionality." />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="//www.moviemasher.com/media/img/mm-logo-200.png" />
+    <meta property="og:url" content="//www.moviemasher.com/" />
+    <meta property="og:site_name" content="Movie Masher"/>
+    <meta property="fb:app_id" content="9967461435" />
+    <meta property="fb:admins" content="1052005972" />
+    <meta name="wot-verification" content="6e8112b54b30e750517c"/>
+    <style>
+    iframe.zoom{
+      width:100%;
+      height:100%;
+      margin:0px;
+      padding:0;
+      -webkit-box-sizing: content-box;
+        -moz-box-sizing: content-box;
+          box-sizing: content-box;
+       border:0;
+       overflow:auto;
+       -webkit-overflow-scrolling:touch;
+    }
+    div.swapped {
+      padding: 10px;
+       position:absolute;
+       left:0;
+       right:0;
+       top:0;
+       bottom:0;
+    }
+    div.frame {
+      padding: 0px;
+    }
+    </style>
+    <script src="../../angular/angular.min.js"></script>
+    <script src="../../angular-bootstrap/ui-bootstrap.min.js"></script>
+    <script src="../../angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
+    <script src="../../angular-animate/angular-animate.min.js"></script>
+    <script src="../../angular-resource/angular-resource.min.js"></script>
+    <script src="../../angular-file-upload/dist/angular-file-upload.min.js"></script>
+    <script src="../../angular-bootstrap-colorpicker/js/bootstrap-colorpicker-module.js"></script>
+    <script src="../../opentype.js/dist/opentype.min.js"></script>
+    <script src="../../script.js/dist/script.min.js"></script>
+    <script src="../../moviemasher.js/dist/moviemasher.min.js"></script>
+    <script src="../dist/angular-moviemasher.min.js"></script>
+
+  </head>
+  <body ng-app='angular.moviemasher'>
+    <div id="fb-root"></div>
+    <!-- Header -->
+      <div class='hd'>
+        <div class='wd pd'>
+          <!-- Social Buttons -->
+        <table style='float:right;margin-top:24px;'>
+          <tr style='vertical-align:top;'>
+            <td style='padding:4px;'>
+              <div class="fb-like" data-href="http://www.moviemasher.com" data-send="true" data-layout="button_count" data-width="132" data-show-faces="false" data-font="arial"></div>
+            </td>
+            <td>
+              <!-- Place this tag where you want the +1 button to render. -->
+              <div style='width:70px;overflow:hidden;'>
+                <div class="g-plusone" data-size="medium" data-href="http://www.moviemasher.com"></div>
+              </div>
+              <!-- Place this tag after the last +1 button tag. -->
+              <script type="text/javascript">
+                (function() {
+                var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+                po.src = 'https://apis.google.com/js/plusone.js';
+                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+                })();
+              </script>
+            </td>
+            <td style='padding-top:6px;'>
+              <iframe style="border:none;width:90px;height:24px;overflow:hidden;" src="https://platform.twitter.com/widgets/tweet_button.html?url=http%3A%2F%2Fwww.moviemasher.com"></iframe>
+            </td>
+            <td style='padding-top:6px;'>
+              <form action="https://www.paypal.com/cgi-bin/webscr" method="post">
+                <input type="hidden" name="cmd" value="_s-xclick" />
+                <input type="hidden" name="hosted_button_id" value="75YQHMFEATLCL" />
+                <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_SM.gif" name="submit" alt="PayPal - The safer, easier way to pay online!" />
+                <img alt="" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1" />
+              </form>
+            </td>
+          </tr>
+        </table>
+        <a href='/'><img style='float:left;margin-right:10px;' src='/media/img/mm-logo-200.png' width='100' height='100' alt='MM' /><img style='margin-top:26px' src='/media/img/moviemasher-410x48.png' width='205' height='24' alt='Movie Masher' /></a>
+        <h1>open source online video editor &amp; encoding api</h1>
+        <h2 style="float:right;">
+          <b><a href='/docs/index.html'>Documentation</a></b> |
+          <b><a href='/demo/index.html'>Demo</a></b> |
+          <b><a href='/deploy/index.html'>Deploy</a></b> |
+          <b><a href='mailto:connect27@moviemasher.com'>Contact</a></b>
+        </h2>
+      </div>
+      </div>
+      <!-- Content Start -->
+
+    <div style='text-align:center'>
+      This example deployment does not include upload, render, or download
+      support - see the docs for several ways
+      to view an example that does...
+    </div>
+    <div class="amm-ui" style="top:160px;" amm-rest-module-search-params-group="@group" amm-rest-module-search-url="../../../../media/json/:group.json" amm-rest-media-search-params-group="@group" amm-rest-media-search-url="../../../../media/json/:group.json"></div>
+  <!-- Google Analytics -->
+        <script>
+            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+            e.src='//www.google-analytics.com/analytics.js';
+            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+            ga('create','UA-760062-1','auto');ga('send','pageview');
+        </script>
+        <!-- Facebook Integration -->
+        <script>
+          (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=9967461435";
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));
+    </script>
+  </body>
 </html>
