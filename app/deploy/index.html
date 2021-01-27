@@ -62,21 +62,9 @@ div.frame {
 <script type="text/javascript" src="/media/js/swap.js"></script>
 <script type='text/javascript'>
 <!--
-var ids = ["ui-sqs-s3", "headless"];
+var ids = ["quickstart", "transcoder"];
 var swap_ids = ["default","headless_stack"];
-var region_map = {
-  "us-east-1": "US East (Virginia)",
-  "us-east-2": "US East (Ohio)",
-  "us-west-2": "US West (Oregon)",
-  "us-west-1": "US West (N. California)",
-  "eu-west-1": "EU West (Ireland)",
-  "eu-central-1": "EU Central (Frankfurt)",
-  "ap-northeast-1": "Asia Pacific (Tokyo)",
-  "ap-northeast-2": "Asia Pacific (Seoul)",
-  "ap-southeast-1": "Asia Pacific (Singapore)",
-  "ap-southeast-2": "Asia Pacific (Sydney)",
-  "sa-east-1": "South America (São Paulo)",
-};
+
 function id_index(form){
 	var sdk_checked = form.sdk[1].checked;
 	var index = 0;
@@ -90,19 +78,33 @@ function changed(form) {
 function submitted(form) {
 	var select = form.region;
 	var region = select.options[select.selectedIndex].value;
-	var version = '4.0.21';
 	var template = ids[id_index(form)];
-	var url = 'https://console.aws.amazon.com/cloudformation/home?region=';
-	url += region;
-	url += '#cstack=sn~MovieMasher-' + template + '-' + version + '|turl~http://s3';
-	if (region != 'us-east-1') url += '-' + region;
-	url += '.amazonaws.com/';
-	url += 'moviemasher-' + region + '/cloudformation/'
-	url += template + '-' + version;
-	url += '.txt';
-	form.action = url;
+	form.action = cloudformation_url(region, template);
 	return true;
 }
+
+function cloudformation_url(region, template) {
+//
+// 	https://eu-central-1.console.aws.amazon.com/cloudformation/home?region=eu-central-1#/stacks/create/review?
+// 	templateURL=https://s3.eu-central-1.amazonaws.com/cloudformation-templates-eu-central-1/WordPress_Single_Instance.template
+// 	&stackName=MyWPBlog&param_DBName=mywpblog&param_InstanceType=t2.medium&param_KeyName=MyKeyPair
+	var version = '4-0-25';
+	var url = 'https://';
+	url += region;
+	url += '.console.aws.amazon.com/cloudformation/home?region=';
+	url += region;
+
+	url += '#/stacks/create/review?templateURL=https://moviemasher-';
+	url += region;
+	url += '.s3';
+	if (region != 'us-east-1') url += '.' + region;
+	url += '.amazonaws.com/cloudformation/';
+	url += template + '-' + version;
+	url += '.json';
+	url += '&stackName=MovieMasher-' + template + '-' + version;
+  return url;
+}
+
 //-->
 </script>
     </head>
@@ -117,21 +119,7 @@ function submitted(form) {
 						<td style='padding:4px;'>
 							<div class="fb-like" data-href="http://www.moviemasher.com" data-send="true" data-layout="button_count" data-width="132" data-show-faces="false" data-font="arial"></div>
 						</td>
-						<td>
-							<!-- Place this tag where you want the +1 button to render. -->
-							<div style='width:70px;overflow:hidden;'>
-								<div class="g-plusone" data-size="medium" data-href="http://www.moviemasher.com"></div>
-							</div>
-							<!-- Place this tag after the last +1 button tag. -->
-							<script type="text/javascript">
-							  (function() {
-								var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
-								po.src = 'https://apis.google.com/js/plusone.js';
-								var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
-							  })();
-							</script>
-						</td>
-						<td style='padding-top:6px;'>
+						<td style='padding-top:4px;'>
 							<iframe style="border:none;width:90px;height:24px;overflow:hidden;" src="https://platform.twitter.com/widgets/tweet_button.html?url=http%3A%2F%2Fwww.moviemasher.com"></iframe>
 						</td>
 						<td style='padding-top:6px;'>
@@ -175,18 +163,19 @@ function submitted(form) {
             Deploy into which AWS Region?
             <br>
             <select name='region' id='region'>
-              <option value="us-east-1">US East (Virginia)</option>
-              <option value="us-east-1">US East (Ohio)</option>
-              <option value="us-west-2">US West (Oregon)</option>
-              <option value="us-west-1">US West (N. California)</option>
-              <option value="eu-west-1">EU West (Ireland)</option>
-              <option value="eu-central-1">EU Central (Frankfurt)</option>
-              <option value="ap-northeast-1">Asia Pacific (Tokyo)</option>
-              <option value="ap-northeast-2">Asia Pacific (Seoul)</option>
-              <option value="ap-southeast-1">Asia Pacific (Singapore)</option>
-              <option value="ap-southeast-2">Asia Pacific (Sydney)</option>
-              <option value="ap-south-1">Asia Pacific (Mumbai)</option>
-              <option value="sa-east-1">South America (São Paulo)</option>
+              <option value="us-east-1">US East 1 (Virginia)</option>
+              <option value="us-east-2">US East 2 (Ohio)</option>
+              <option value="us-west-1">US West 1 (N. California)</option>
+              <option value="us-west-2">US West 2 (Oregon)</option>
+              <option value="eu-west-1">EU West 1 (Ireland)</option>
+              <option value="eu-west-3">EU West 3 (Paris)</option>
+              <option value="eu-central-1">EU Central 1 (Frankfurt)</option>
+              <option value="ap-northeast-1">Asia Pacific Northeast 1 (Tokyo)</option>
+              <option value="ap-northeast-2">Asia Pacific Northeast 2 (Seoul)</option>
+              <option value="ap-southeast-1">Asia Pacific Southeast 1 (Singapore)</option>
+              <option value="ap-southeast-2">Asia Pacific Southeast 2 (Sydney)</option>
+              <option value="ap-south-1">Asia Pacific South 1 (Mumbai)</option>
+              <option value="sa-east-1">South America East 1 (São Paulo)</option>
             </select>
           </p>
           <p>

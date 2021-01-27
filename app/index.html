@@ -30,21 +30,7 @@
             <td style='padding:4px;'>
               <div class="fb-like" data-href="http://www.moviemasher.com" data-send="true" data-layout="button_count" data-width="132" data-show-faces="false" data-font="arial"></div>
             </td>
-            <td>
-              <!-- Place this tag where you want the +1 button to render. -->
-              <div style='width:70px;overflow:hidden;'>
-                <div class="g-plusone" data-size="medium" data-href="http://www.moviemasher.com"></div>
-              </div>
-              <!-- Place this tag after the last +1 button tag. -->
-              <script type="text/javascript">
-                (function() {
-                var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
-                po.src = 'https://apis.google.com/js/plusone.js';
-                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
-                })();
-              </script>
-            </td>
-            <td style='padding-top:6px;'>
+            <td style='padding-top:4px;'>
               <iframe style="border:none;width:90px;height:24px;overflow:hidden;" src="https://platform.twitter.com/widgets/tweet_button.html?url=http%3A%2F%2Fwww.moviemasher.com"></iframe>
             </td>
             <td style='padding-top:6px;'>
@@ -72,58 +58,6 @@
       <div class='bd wd bc'>
       <table id="home">
         <tr>
-          <td style='width:30%'>
-            <h3><em class='c2'>version</em> 4.0.21</h3>
-            Released: March 17th, 2017
-            <p>
-              <b>Latest Features:</b>
-            </p>
-            <ul>
-              <li>
-                new <b>blend</b> filter, for applying many composite modes like screen, difference, darken, etc.
-              </li>
-              <li>
-                new <b>chromakey</b> filter, for knocking out backgrounds
-              </li>
-              <li>
-                new <b>convolution</b> filter, for many common effects like blur, sharpen, etc.
-              </li>
-              <li>
-                new <b>colorchannelmixer</b> filter, for sepia, grayscale, etc.
-              </li>
-              <li>
-                new <b>docker-compose</b> files, for easier Docker usage
-            </ul>
-            <p>
-              <a href='/docs/index.html'><img style='margin-right:6px;' src='/media/img/docs-50x64.png' width='25' height='32' /><b>Documentation</b></a>
-            </p>
-            <p>
-              Movie Masher version 4.0.x overhauls core components while limiting changes
-              in its middleware layer, for easier migration of existing sites.
-            </p>
-            <ul>
-              <li>
-                UI components previously implemented in
-                <a href='http://www.adobe.com/products/flash.html'>Adobe Flash</a>
-                have been ported to native
-                <a href='http://en.wikipedia.org/wiki/JavaScript'>JavaScript</a>
-                and
-                <a href='https://angularjs.org'>AngularJS</a>
-              </li>
-              <li>
-                Transcoding components previously implemented in
-                <a href='http://php.net/'>PHP</a>
-                have been ported to
-                <a href='https://www.ruby-lang.org/'>Ruby</a>
-              </li>
-              <li>
-                The mash format has changed from
-                <a href='http://www.w3.org/XML/'>XML</a>
-                to
-                <a href='http://www.json.org/'>JSON</a>
-              </li>
-            </ul>
-          </td>
           <td style='width:33%;'>
             <h3><em class='c2'>what</em> is movie masher?</h3>
             Movie Masher is a collection of open source projects that
@@ -145,34 +79,23 @@
             </ul>
             <p>
               The projects can be used individually or together for a complete end-to-end system.
+
+              Movie Masher is designed with integration in mind, enabling a variety of deployment
+              strategies.
             </p>
             <p>
-              Movie Masher is designed with integration in mind, enabling a variety of deployment
-              strategies. Core authentication, data and media storage mechanisms are isolated
-              in the PHP middleware.
-              <a class='bt' style='margin-top: 10px;float:right;' href='/demo/index.html'><img style='margin-right:6px;' src='/media/img/mm-136x64.png' width='34' height='16' alt='MM' />View Demo</a>
+              <a href='/docs/index.html'><img style='margin-right:6px;' src='/media/img/docs-50x64.png' width='25' height='32' /><b>Documentation</b></a>
             </p>
-    <!--          <div style='height:150px;margin-bottom:10px;' class='bt'>
-              <img style='margin-right:6px;' src='/media/img/azc-225.png' width='45' height='45' />
-              <img style='margin-right:6px;' src='/media/img/azs-146.png' width='73' height='73' />
-            </div>
-          -->
           </td>
           <td style='width:37%;'>
             <h3><em class='c2'>where</em> is movie masher?</h3>
             <p>
             Run Movie Masher in the cloud, on your box, or dig right into the codebase...
             </p>
-            <a href='https://aws.amazon.com/marketplace/pp/B00QKW0P2A'><img src='/media/img/amp-420x80.png' width='210' height='40' alt='AWS Marketplace' /><h2>Movie Masher AMI in AWS Marketplace</h2></a>
+            <a href='https://aws.amazon.com/marketplace/pp/B00QKW0P2A'><img src='/media/img/amp-1228x150.png' width='210' alt='AWS Marketplace' /><h2>Movie Masher AMI in AWS Marketplace</h2></a>
             <p>
               You are just 1-Click&trade; from launching your own private deployment of Movie Masher
-              within Amazon's cloud - check out our quick and easy <a href='/deploy/index.html'><b>Deployment Wizard</b></a>!
-            </p>
-
-            <a href='http://azure.microsoft.com/en-us/marketplace/partners/moviemasher/moviemasher-moviemasher/'><img src='/media/img/azm-420x80.png' width='210' height='40' alt='Azure Marketplace' /><h2>Movie Masher VM in Azure Marketplace</h2></a>
-            <p>
-              You are just a few clicks from launching your own VM of Movie Masher
-              within Microsoft Azure's cloud.
+              within Amazon's cloud - check out the quick and easy <a href='/deploy/index.html'><b>Deployment Wizard</b></a>!
             </p>
 
             <a href='https://hub.docker.com/r/moviemasher/angular-moviemasher/'><img src='/media/img/doc-420x80.png' width='210' height='40' alt='Docker' /><h2>Movie Masher Images in Docker Hub</h2></a>
@@ -184,6 +107,34 @@
             <p>
               You are just three clone commands from editing your own local copy of Movie Masher
               within your IDE.
+            </p>
+          </td>
+          <td style='width:30%'>
+            <h3><em class='c2'>version</em> 4.0.25</h3>
+            Released: Jan 3rd, 2021
+            <p>
+              <b>Latest Features:</b>
+            </p>
+            <ul>
+              <li>
+                new <b>AMI</b> availability in EU West (Paris)
+              <li>
+                new <b>blend</b> filter, for applying many composite modes like screen, difference, darken, etc.
+              </li>
+              <li>
+                new <b>chromakey</b> filter, for knocking out backgrounds
+              </li>
+              <li>
+                new <b>convolution</b> filter, for many common effects like blur, sharpen, etc.
+              </li>
+              <li>
+                new <b>colorchannelmixer</b> filter, for sepia, grayscale, etc.
+              </li>
+              <li>
+                new <b>docker-compose</b> files, for easier Docker usage
+            </ul>
+            <p>
+              <a class='bt' href='/demo/index.html'><img style='margin-right:6px;' src='/media/img/mm-136x64.png' width='34' height='16' alt='MM' />View Demo</a>
             </p>
           </td>
         </tr>

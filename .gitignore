@@ -2,7 +2,6 @@ logs/*
 !.gitkeep
 node_modules*
 moviemasher.rb
-app/bower_components/*
 tmp
 .DS_Store
 .idea

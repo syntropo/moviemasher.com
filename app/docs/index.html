@@ -55,21 +55,7 @@
             <td style='padding:4px;'>
               <div class="fb-like" data-href="http://www.moviemasher.com" data-send="true" data-layout="button_count" data-width="132" data-show-faces="false" data-font="arial"></div>
             </td>
-            <td>
-              <!-- Place this tag where you want the +1 button to render. -->
-              <div style='width:70px;overflow:hidden;'>
-                <div class="g-plusone" data-size="medium" data-href="http://www.moviemasher.com"></div>
-              </div>
-              <!-- Place this tag after the last +1 button tag. -->
-              <script type="text/javascript">
-                (function() {
-                var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
-                po.src = 'https://apis.google.com/js/plusone.js';
-                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
-                })();
-              </script>
-            </td>
-            <td style='padding-top:6px;'>
+            <td style='padding-top:4px;'>
               <iframe style="border:none;width:90px;height:24px;overflow:hidden;" src="https://platform.twitter.com/widgets/tweet_button.html?url=http%3A%2F%2Fwww.moviemasher.com"></iframe>
             </td>
             <td style='padding-top:6px;'>
@@ -101,17 +87,15 @@
           <td style='width:24%'>
             <h3><em class='c2'>documentation</em></h3>
             <p>
-              <em class='c2'>version</em> 4.0.21
+              <em class='c2'>version</em> 4.0.25
               <br>
-              Released: March 17th, 2017
+              Released: Jan 3rd, 2021
             </p>
 
             <b><a href='#a0'>Getting Started</a></b>
             <hr/>
             <p style='font-size:13px;'>
               <a href='#a1'>AWS Marketplace</a>
-              <br />
-              <a href='#a2'>Azure Marketplace</a>
               <br />
               <a href='#a3'>Docker</a>
               <br />
@@ -137,14 +121,14 @@
               <h2><a name='a0'>Getting Started</a></h2>
               <p>
                 Certainly the fastest, easiest way to get a fully functional deployment up and running
-                is to launch Movie Masher within the AWS Marketplace or Microsoft Azure Marketplace.
+                is to launch Movie Masher within the AWS Marketplace.
                 You need to have an account and will be billed based on usage of their infrastructure.
               </p>
               <p>
                 Another fast and easy method of seeing the system in action is to run the
                 Movie Masher Docker images locally. You need to have Docker installed, though
                 no account with them is necessary and no charges are incurred. Docker is also
-                available as a paid service within both AWS Marketplace and Microsoft Azure Marketplace.
+                available as a paid service within AWS Marketplace.
               </p>
               <p>
                 Alternatively, source code for each project is available
@@ -195,15 +179,6 @@
                 hosting the UI, as well as a queue and bucket. Whichever
                 options are selected, the appropriate Roles are assigned to
                 limit access to the queue and bucket.
-              </p>
-            </div>
-            <div>
-              <h2><a name='a2'><span style="color:red;">NEW</span> Azure Marketplace</a></h2>
-              <p>
-                The <a href='http://azure.microsoft.com/en-us/marketplace/partners/moviemasher/moviemasher-moviemasher/'>Movie Masher VMI</a>
-                (Virtual Machine Image) combines all three
-                projects on one box, preconfigured to work well within the Microsoft Azure infrastructure.
-                Support for utilizing Azure's storage and message queue services is still in the works...
               </p>
             </div>
             <div>

@@ -1,0 +1,10 @@
+version: '2'
+services:
+  npm:
+    image: node
+    container_name: angular_moviemasher_npm
+    volumes:
+      - "../../../node_modules/:/node_modules"
+      - "../../../package.json:/package.json"
+    command: npm install --verbose --no-bin-links
+
